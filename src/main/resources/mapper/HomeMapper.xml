@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="org.kbns.mapper.HomeMapper">
+
+    <select id="selectCard" resultType="org.kbns.domain.HomeVO" >
+        <![CDATA[
+            SELECT  /* org.kbns.mapper.HomeMapper.selectCard */
+                   CARD_ID as cardId
+                 , CUST_ID as custId
+                 , CARD_SE_CD as cardSeCd
+                 , CARD_KND_CD as cardKndCd
+                 , CARD_BRAND_CD as cardBrandCd
+              FROM KBNS.TB_CARD_ID
+             WHERE ROWNUM < 11
+        ]]>
+    </select>
+
+</mapper>
